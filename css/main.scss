@@ -1,0 +1,309 @@
+
+
+// Semantic color scheme
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+; 
+@import url('https://fonts.googleapis.com/css?family=Roboto Condensed'); 
+@import url('https://fonts.googleapis.com/css?family=Montserrat'); 
+; 
+; 
+$theme-colors: (
+  primary: #007bff,
+  secondary: #949caf,
+  success: #28a745,
+  info: #00fbff,
+  warning: #ffc107,
+  danger: #dc3545,
+  light: #f8f9fa,
+  dark: #2e4a65,
+	bg-light: #bdc3c7,
+	bg-dark: #2e4a65,
+);
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+ 
+$enable-rounded:            true !default;
+$enable-shadows:            true;
+$enable-gradients:          true;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+// Variables
+//
+// Theme settings.
+
+$body-bg: white;
+$body-color: #545454;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$body-color-inverse: invert($body-color) !default;
+$link-color: #007bff;
+
+
+$font-family-base: Roboto Condensed;
+
+
+
+
+
+$headings-font-family: Montserrat;
+
+
+
+
+
+
+
+
+
+$font-size-base: 1rem;
+
+
+
+
+
+
+ // Assumes the browser default, typically `16px`
+$font-size-h1: 1 * $font-size-base;
+$font-size-h2: 2 * $font-size-base;
+$font-size-h3: 1.75 * $font-size-base;
+$font-size-h4: 1.5 * $font-size-base;
+$font-size-h5: 1.25 * $font-size-base;
+$font-size-h6: $font-size-base;
+
+$display1-size: 6 * $font-size-base;
+$display2-size: 5.5 * $font-size-base;
+$display3-size: 4.5 * $font-size-base;
+$display4-size: 3.5 * $font-size-base;
+
+$border-radius: .25rem;
+
+
+$display-font-family: Roboto Condensed;
+@import 'bootstrap-4.0.0-beta.1';
+
+
+body > * {
+  background-size: cover;
+}
+
+.opaque-overlay {
+  overflow: hidden;
+  position: relative; 
+  > *:first-child:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    pointer-events:none;
+    background: rgba(map-get($theme-colors, 'dark'), 0.25);
+  }
+}
+
+.background-gradient {
+	overflow: hidden;
+  position: relative; 
+  > *:first-child:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    pointer-events:none;
+    background: linear-gradient(135deg , #bdc3c7 0%, #708090 100%);
+
+  }
+}
+
+.gradient-overlay {
+  overflow: hidden;
+  position: relative; 
+  > *:first-child:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    pointer-events:none;
+    background: linear-gradient(to top , map-get($theme-colors, 'dark') 0%, transparent 100%);
+
+  }
+}
+
+header a{
+	text-decoration:none;
+	color: map-get($theme-colors, 'light');
+  -webkit-transition: font-size .5s ease;
+  -moz-transition: font-size .5s ease;
+  -o-transition: font-size .5s ease;
+  transition: font-size .5s ease;
+}
+
+header a:hover{
+	text-decoration:none;
+  color: map-get($theme-colors, 'light');
+  font-size: $font-size-h1 * 1.2;
+}
+
+hr{
+    max-width: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-width: 3px;
+}
+
+.navbar {
+  z-index: 1;
+  color: rgb(118, 127, 135);
+  background: rgba(255, 255, 255, 1);
+    	-webkit-transition: background .3s ease-out;
+  	-moz-transition: background .3s ease-out;
+  	-o-transition: background .3s ease-out;
+  	transition: background .3s ease-out;
+}
+
+.navbar-brand-black{
+	-webkit-filter: invert(50%); 
+  filter: invert(50%);
+}
+
+.navbar .navbar-toggler{
+  	z-index: 2;
+  	border: 1px solid #ccc;
+  	color: rgb(118, 127, 135);
+}
+
+.navbar-transparent{
+		background: none;
+}
+
+.navbar .navbar-nav > li > a.nav-link {
+ 		color: rgb(118, 127, 135);
+  	-webkit-transition: color .3s ease;
+  	-moz-transition: color .3s ease;
+  	-o-transition: color .3s ease;
+  	transition: color .3s ease;
+}
+
+.navbar .navbar-nav > li > a:hover{
+ 		color: #007bff; 
+}
+
+.navbar-light .navbar-nav > li > a.nav-link:hover{
+ 		color: #f8f9fa; 
+}
+
+%vertical-rhythm{
+  margin-bottom:calc(30px / 2);
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom:calc(30px / 2);
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+p{
+  font-size:16px;
+  word-spacing:1.1px;
+  letter-spacing:0.4px;
+  line-height:1.8em;
+}
+
+@media (min-width:991px) {
+  p{
+    font-size:21px;
+    line-height:1.6em;
+  }
+}
+
+.wip-image{
+	width: 40%;
+  height: 40%;
+}
+
+@media (min-width:750px) {
+  .wip-image{
+    width: auto;
+    height: auto;
+  }
+}
+
+a.social-icon i{
+		color: #ffffff;
+   	-webkit-transition: color .3s ease;
+  	-moz-transition: color .3s ease;
+  	-o-transition: color .3s ease;
+  	transition: color .3s ease;
+}
+
+a.social-icon[title="facebook"]:hover i{
+
+   		color: #3b5998;
+}
+
+a.social-icon[title="twitter"]:hover i{
+
+   		color: #00aced;
+}
+
+a.social-icon[title="instagram"]:hover i{
+
+   		  color: #e95950;
+  	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+ 		-webkit-text-fill-color: transparent;
+}
+
+#honeypot{
+  display: none; 
+}
+
+.modal-backdrop {
+   background-color: rgba(0, 0, 0, 0.5);
+}

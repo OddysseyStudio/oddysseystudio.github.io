@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html %}
+
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md fixed-top navbar-light navbar-transparent">
+    <div class="container">
+      <a class="navbar-brand text-white js-scroll-trigger" href="#page-top" title="Oddyssey Studio">
+        <img src="{{ "/images/logo/Oddyssey_SVG.svg" | prepend: site.baseurl }}" width="90"> </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fa fa-bars fa-fw"></i> </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item text-uppercase">
+            <a class="nav-link js-scroll-trigger" href="#story"> Our Story</a>
+          </li>
+          <li class="nav-item text-uppercase">
+            <a class="nav-link js-scroll-trigger" href="#team"> Team</a>
+          </li>
+          <li class="nav-item text-uppercase">
+            <a class="nav-link js-scroll-trigger" href="#wip"> WiP</a>
+          </li>
+          <li class="nav-item text-uppercase">
+            <a class="nav-link js-scroll-trigger" href="#contacts"> Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- HEADER -->
+  <header class="pt-5 text-white py-5 background-gradient" id="page-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 my-5">
+          <h1 class="m-0 p-0">
+            <img class="img-fluid d-block mx-auto py-5" src="{{ "/images/logo/Oddyssey_SVG.svg" | prepend: site.baseurl }}" width="80%" height="80%" alt="Oddyssey Studio"> </h1>
+        </div>
+        <div class="col-md-12 text-center align-self-center my-1">
+          <a class="header-button js-scroll-trigger" href="#story"> <i class="d-block  fa fa-5x fa-angle-down"></i> </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Sections -->
+  {{ content }}
+	
+  {% include footer.html %}
+
+  <!-- MODAL -->
+  <div class="modal fade" id="thanks-modal" tabindex="-1" role="dialog" aria-labelledby="thanksModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="thanksModalTitle">Thanks!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">X</span> </button>
+        </div>
+        <div class="modal-body"> Modal thanks text </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Dismiss</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- javascript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
