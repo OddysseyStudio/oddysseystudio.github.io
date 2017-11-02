@@ -70,7 +70,8 @@ $(document).ready(function(){
   }, 200);
   sr.reveal('#team .container', {
     duration: 1000,
-    delay: 200
+    delay: 100,
+	scale: 0.3
   });
   sr.reveal('#wip .container', {
     duration: 1000,
