@@ -1,5 +1,6 @@
 ---
 layout: home/home-index
+tags: game, development, turin, italy, games, Dev, Art, 2d, 3d, narrative, unity, unreal, gamemaker, design, programmer, entertainment, oddyssey, studio, stories, the, eye
 ---
 
 {% capture story %}
