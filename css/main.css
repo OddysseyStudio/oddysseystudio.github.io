@@ -5862,8 +5862,8 @@ header#page-top {
 
 @media only screen and (max-width: 320px) {
 	header#page-top {
-		padding-top: 12rem;
-	  padding-bottom: calc(12rem - 56px);
+		padding-top: 11rem;
+	  padding-bottom: calc(11rem - 56px);
 	}
 }
 
