@@ -5860,6 +5860,27 @@ header#page-top {
   background-size: cover; 
 }
 
+@media only screen and (max-width: 320px) {
+	header#page-top {
+		padding-top: 12rem;
+	  padding-bottom: calc(12rem - 56px);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	header#page-top {
+		padding-top: 13rem;
+		padding-bottom: calc(13rem - 56px);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	header#page-top {
+		padding-top: 15rem;
+		padding-bottom: calc(15rem - 56px);
+	}
+}
+
 header a {
   text-decoration: none;
   color: #f8f9fa;
